@@ -2,6 +2,7 @@ using SharedLibrary.Models;
 using System.Diagnostics;
 using System.Runtime.InteropServices;
 using Visual2OPT.TestGraphAlgorithms;
+using Visual2OPT.Server;
 
 namespace Visual2OPT
 {
@@ -171,6 +172,11 @@ namespace Visual2OPT
 
             for (int y = 0; y < height; y += cellHeight) g.DrawLine(redPen, 0, y, width, y);
             for (int x = 0; x < width; x += cellWidth) g.DrawLine(redPen, x, 0, x, height);
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            DBEntites db = new();
         }
     }
 }
