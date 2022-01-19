@@ -70,7 +70,7 @@ namespace Visual2OPT
             //Nodes = _cm.Nodes.ToList();
 
             //TestHungarian2 TH = new(_random);
-            TestVertexCover TVC = new();
+            var TVC = new TestVertexCover();
 
 
 

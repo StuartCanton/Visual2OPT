@@ -62,7 +62,7 @@ namespace SharedLibrary.Models
         public static string EdgeArrayToString(this Edge[] edges)
         {
             string from, to;
-            StringBuilder sb = new();
+            StringBuilder sb = new StringBuilder();
             foreach (var item in edges)
             {
                 from = $"{(char)(item.Start+65)}";

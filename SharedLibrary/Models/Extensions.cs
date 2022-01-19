@@ -8,11 +8,11 @@ namespace SharedLibrary.Models
 {
     public static partial class Extensions
     {
-        //public static string QueueToString(this PriorityQueue<TElement,TPriority> queue)
-        public static string QueueToString(this PriorityQueue<Edge,int> queue)
+        //public static string QueueToString(this PriorityQueue<TElement, TPriority> queue)
+        public static string QueueToString(this PriorityQueue<Edge, int> queue)
         {
-            StringBuilder sb = new();
-            PriorityQueue<Edge, int> result = new();
+            StringBuilder sb = new StringBuilder();
+            PriorityQueue<Edge, int> result = new PriorityQueue<Edge, int>();
             result.EnqueueRange(queue.UnorderedItems);
 
             while (result.TryDequeue(out Edge item, out int priority))

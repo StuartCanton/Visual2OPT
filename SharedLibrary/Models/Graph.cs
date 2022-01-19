@@ -33,7 +33,7 @@ namespace SharedLibrary.Models
 
         public Graph GetGraph(int size)
         {
-            Graph graph = new();
+            Graph graph = new Graph();
             graph.Nodes = _nodeFactory.GetNodes(size);
             graph.Edges = _edgeFactory.GetEdges(graph.Nodes).ToList();
             graph.Matrix = _matrixFactory.GetMatrixFromEdges(graph.Edges.ToArray(), graph.Nodes);
