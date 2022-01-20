@@ -1,8 +1,8 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-	 <TargetFramework>net48</TargetFramework>
-    <TargetFrameworks>net48;net6.0</TargetFrameworks>
+	 <TargetFramework>net6.0</TargetFramework>
+    <!-- <TargetFrameworks>net48;net6.0</TargetFrameworks> -->
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
@@ -17,8 +17,12 @@
     </EntityDeploy>
   </ItemGroup>
 
-  <ItemGroup Condition="'$(TargetFramework)' == 'net48'">
+  <ItemGroup Condition="'$(TargetFramework)' == 'net6.0'">
     <PackageReference Include="EntityFramework" Version="6.4.4" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="6.0.1" />
   </ItemGroup>
 
   <ItemGroup>

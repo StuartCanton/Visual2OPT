@@ -2,7 +2,7 @@ using SharedLibrary.Models;
 using System.Diagnostics;
 using System.Runtime.InteropServices;
 using Visual2OPT.TestGraphAlgorithms;
-using Visual2OPT.Server;
+using Server;
 
 namespace Visual2OPT
 {
@@ -54,6 +54,11 @@ namespace Visual2OPT
             //    if (_matrix.IsAdjacent(item))
             //        item.isVisible = true;
             //}
+
+            GraphAlgorithms.Christofides1 c1 = new();
+
+
+
 
             InitializeComponent();
             // Connect the Paint event of the PictureBox to the event handler method.
@@ -174,9 +179,18 @@ namespace Visual2OPT
             for (int x = 0; x < width; x += cellWidth) g.DrawLine(redPen, x, 0, x, height);
         }
 
+        //async private List<City> GetCities()
+        //{
+        //    return await CapitalCities.Capitals;
+        //}
+
         private void Form1_Load(object sender, EventArgs e)
         {
-            DBEntites db = new();
+            //DBEntities db = new();
+            var name = CapitalCities.Capitals[0].Name;
+            //var list = 
+            Console.WriteLine("City:",name);
+            Console.WriteLine("City:", CapitalCities.Capitals.Count);
         }
     }
 }
