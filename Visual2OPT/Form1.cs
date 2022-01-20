@@ -3,6 +3,7 @@ using System.Diagnostics;
 using System.Runtime.InteropServices;
 using Visual2OPT.TestGraphAlgorithms;
 using Server;
+using Visual2OPT.GraphAlgorithms;
 
 namespace Visual2OPT
 {
@@ -55,8 +56,8 @@ namespace Visual2OPT
             //        item.isVisible = true;
             //}
 
-            GraphAlgorithms.Christofides1 c1 = new();
-
+            //GraphAlgorithms.Christofides1 c1 = new();
+            DepthFirstSearch depthFirstSearch = new(Edges);
 
 
 

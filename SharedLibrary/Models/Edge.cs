@@ -65,10 +65,21 @@ namespace SharedLibrary.Models
             StringBuilder sb = new StringBuilder();
             foreach (var item in edges)
             {
-                from = $"{(char)(item.Start+65)}";
+                //sb.AppendLine(EdgeToString(item));
+                from = $"{(char)(item.Start + 65)}";
                 to = $"{(char)(item.End + 65)}";
                 sb.AppendLine($"start:{from},end:{to},cost:{item.Distance}");
             }
+
+            return sb.ToString();
+        }
+        public static string EdgeToString(this Edge edge)
+        {
+            string from, to;
+            StringBuilder sb = new StringBuilder();
+                from = $"{(char)(edge.Start + 65)}";
+                to = $"{(char)(edge.End + 65)}";
+                sb.AppendLine($"start:{from},end:{to},cost:{edge.Distance}");
 
             return sb.ToString();
         }

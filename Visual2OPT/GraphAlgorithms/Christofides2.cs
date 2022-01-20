@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Visual2OPT.GraphAlgorithms
 {
-    internal class Models
+    internal class Christofides2
     {
     }
 }
